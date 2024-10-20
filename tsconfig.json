@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "module": "CommonJS",
+    "module": "NodeNext",
     "outDir": "./dist",
     "strict": true,
     "esModuleInterop": true

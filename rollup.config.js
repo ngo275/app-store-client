@@ -21,5 +21,5 @@ export default {
     }),
     terser(), // Minifies the output bundle
   ],
-  external: [],
+  external: ["memoizee", "xml2js", "util", "cheerio", "axios"],
 };
