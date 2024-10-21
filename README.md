@@ -37,7 +37,7 @@ yarn add app-store-client
 First, import and instantiate the AppStoreClient:
 
 ```typescript
-import { AppStoreClient, Collection } from "app-store-client";
+import { AppStoreClient, Collection, Country } from "app-store-client";
 
 const client = new AppStoreClient();
 ```
@@ -167,7 +167,7 @@ export interface AppStoreClientOptions {
 }
 ```
 
-- `country`: The country to use. Defaults to `US`.
+- `country`: The country to use. Defaults to `Country.US`. You can find the list of available countries [here](https://github.com/ngo275/app-store-client/blob/master/src/constants.ts).
 - `language`: The language to use. Defaults to `en-us`.
 - `requestOptions`: The request options to use.
 - `throttle`: The throttle to use. Defaults to undefined.
