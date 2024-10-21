@@ -1,12 +1,30 @@
 {
   "name": "app-store-client",
   "description": "A TypeScript client for the Apple App Store API",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "author": "Shu",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ngo275/app-store-client.git"
+  },
+  "keywords": [
+    "app",
+    "apple",
+    "store",
+    "itunes",
+    "appstore",
+    "app store",
+    "app store client",
+    "typescript"
+  ],
+  "bugs": {
+    "url": "https://github.com/ngo275/app-store-client/issues"
+  },
+  "homepage": "https://github.com/ngo275/app-store-client#readme",
   "scripts": {
     "lint": "eslint ./src/**/*.ts",
     "build": "rollup -c --bundleConfigAsCjs",
