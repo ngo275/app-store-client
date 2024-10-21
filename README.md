@@ -2,7 +2,7 @@
 
 ## What is this?
 
-This library is a TypeScript library for retrieving public data from the App Store. For example, you can get app details, ratings, reviews, similar apps, and privacy information of other apps.
+This library is a TypeScript library for retrieving public data from the App Store. For example, you can get app details, ratings, reviews, similar apps, and privacy information.
 
 Note that it is different from App Connect API, which focuses on providing API about your app, such as app sales, ratings, reviews, etc.
 
@@ -52,6 +52,17 @@ const appData = await client.app({ id: "6446901002" });
 
 // Or use app ID (bundle ID)
 const appData = await client.app({ appId: "com.burbn.barcelona" });
+
+console.log(appData);
+
+// {
+//   id: '6446901002',
+//   appId: 'com.burbn.barcelona',
+//   title: 'Threads',
+//   url: 'https://apps.apple.com/us/app/threads/id6446901002?uo=4',
+//   description: 'Say more with Threads — Instagram’s text-based conversation app.\n' +
+//   ...
+// }
 ```
 
 ### Get Apps by Developer
@@ -80,7 +91,6 @@ const topFreeApps = await client.list({
 You can get privacy details by ID. You must provide the ID.
 
 ```typescript
-// Use app ID
 const privacy = await client.privacy({ id: "6446901002" });
 ```
 
