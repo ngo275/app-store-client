@@ -36,8 +36,11 @@ export default async function search(
   );
 
   const results = (response.bubbles[0] && response.bubbles[0].results) || [];
-  const pageStart = (options.page || 1) * (options.num || 50);
-  const pageEnd = pageStart + (options.num || 50);
+  const pageStart = Math.min(
+    ((options.page || 1) - 1) * (options.num || 50),
+    results.length,
+  );
+  const pageEnd = Math.min(pageStart + (options.num || 50), results.length);
   const ids = results
     .slice(pageStart, pageEnd)
     .map((result: Record<string, any>) => result.id);

@@ -1,3 +1,4 @@
+import { Country } from "../../src/constants";
 import search from "../../src/methods/search";
 
 describe("search", () => {
@@ -38,5 +39,18 @@ describe("search", () => {
       expect(app.screenshots).toBeDefined();
       expect(app.ipadScreenshots).toBeDefined();
     });
+  });
+
+  it("should be able to search for a specified locale", async () => {
+    const suggestions = await search({
+      term: "aprendizaje de idiomas",
+      num: 100,
+      language: "es",
+      country: Country.ES,
+    });
+    console.log(suggestions.length);
+
+    expect(suggestions).toBeDefined();
+    expect(suggestions.length).toBeGreaterThan(0);
   });
 });
